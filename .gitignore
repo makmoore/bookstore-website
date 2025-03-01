@@ -1,0 +1,27 @@
+# Ignore node_modules directory (if you add JavaScript dependencies in the future)
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore temporary files created by editors (e.g., VS Code, Sublime Text)
+.vscode/
+.idea/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore environment files (if you decide to use environment variables in future updates)
+.env
+
+# Ignore build or distribution directories (if you decide to build the project in the future)
+dist/
+build/
+
+# Ignore image files that might be added temporarily for testing or debugging (optional)
+*.tmp
+*.bak
+
+# Ignore any other files related to testing, deployment, or debugging
+*.swp
