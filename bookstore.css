@@ -1,0 +1,146 @@
+* { /* applies for all elements unless changed */
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 20px; /* padding inside whole page */
+	line-height: 1.4; /* line spacing for text in the webpage (the default - 1 - looks too crowded) */
+
+	/* I set the background to be an image (image was AI generated) - I looked up how to do this */
+    background-image: url('bk_imgs/bookshelf_bg.png'); /* links to the background image */
+    background-size: cover; /* makes the image cover the entire background */
+    background-position: center; /* background image is centered on screen*/
+    background-repeat: no-repeat; /* makes it so image doesn't repeat */
+    background-attachment: fixed; /* When the user scrolls, the background stays fixed in place (doesn't move) */
+}
+
+header {
+	background-color: #02265b;
+	color: white;
+	font-size: 20px;
+	text-align: center; /* text is centered */
+	border-radius: 10px; /* Rounds the edges (used for most elements in this .css sheet bc it looks nicer to me) */
+	padding: 28px 15px; /* space inside the box for the header */
+	margin-top: 10px; /* space between the nav bar and header (nav bar goes first) */
+}
+
+.textbox { /* This class makes everything inside of it appear as a text box */
+	/* Originally I did this individually (i.e. p & h2 in their own boxes) but I wanted to combine multiple elements in one box so I created this class */
+	background-color: #bfdffd; /* box color */
+	border: 3px solid #02265b; /* box border */
+	margin: 40px auto; /* adds vertical space between the boxes & automatically centers them horizontally */
+	padding: 30px 50px; /* padding inside box */
+	width: 60%; /* The text boxes have a default width to make them all look the same */
+	border-radius: 10px; 
+	display: block; /* This makes it so that each text box is on it's own line (not next to each other) */
+}
+
+/* I decided to put the navigation bar before the header for this assignment. I looked at several websites for inspiration and noticed that a lot of them
+had the navigation at the top right corner. I did that for this assignment and created a logo to go on the left side of the nav bar */
+nav {
+	background-color: #02265b;
+	display: flex; /* this allows the image and ul to be next to eachother in one line */
+    justify-content: space-between; /* the text is justified through having even space between each element */
+    align-items: center; /* items (ul and img) are aligned in the center of the nav box */
+	border-radius: 10px;
+	padding: 5px 20px; /* this is spacing for the inside of the nav box */
+}
+
+nav ul {
+	list-style-type: none; /* list of nav links doesn't have bullet points */
+}
+
+nav ul li {
+	display: inline-block; /* each list element goes on one line (horizontal) */
+	margin: 0 15px;
+	padding: 8px 12px;
+	text-align: right; /* list is on the right side (img on the left by default) */
+}
+
+nav ul li a {
+	text-decoration: none; /* nav links have no default formatting */
+	color: #bfdffd;
+	font-size: 24px;
+	font-weight: bold; /* makes them all bold */
+}
+
+nav ul li a:hover { /* when nav links are hovered over, the color changes */
+	color: #e6f2ff; 
+}
+
+nav img { /* style for the logo image in the nav bar */
+	text-align: left; /* to the left of the links */
+}
+
+article {
+	padding: 20px;
+	border-radius: 10px; /* rounded edges (doesn't actually show up but I had this in before I decided to make the article transparent) */
+	margin-top: 10px; /* space between heading and article */
+	font-size: 20px; 
+	text-align: center; /* all text is centered in the article by default */
+    max-width: 100%; /* prevents article from getting too wide */
+}
+
+article h2 { /* h2 formatting (used for all headings) */
+	color: #02265b;
+	padding: 10px;
+	padding-bottom: 40px; /* big space between the headings and what follows underneath */
+}
+
+article p { /* formatting for all paragraphs */
+	color: #02265b;
+	font-size: 20px;
+	text-align: justify; /* I wanted paragraphs justified while still being centered in the text boxes */
+} 
+
+article p a { /* this really only applies to the social media links - I wanted them to have a | line between them so I embedded them in a paragraph & made them look like normal text */
+	color: #02265b; /* changes the default link color (I think the default looks ugly) */
+	text-align: center;
+} 
+
+article ul { /* formatting for all unordered lists */
+	color: #02265b;
+	font-size: 20px;
+	text-align: justify; /* w/out this the lists are centered which looks strange so I have it justified instead */
+	padding: 20px 70px; /* this is like an indent so the lists start & end further in than the paragraphs */
+	padding-bottom: 0px; /* there was too much room at the bottom of the lists bc of the li margins so I added this */
+}
+
+article ul li {
+	margin-bottom: 40px; /* this just increases the space between each list item to make lists more spread out */
+	/* just using margin looked weird bc there was too much space at the top with the spacing from h2 */
+}
+
+/* Table styling is really just for the Events page but I left it in the .css in case I added another table later */
+article table {
+	border: 3px solid #02265b; /* border on the outside of the table */
+	border-collapse: collapse; /* border is 1 line not 2 */
+	margin: auto; /* centers the table */
+	padding: 10px 15px; /* padding inside the table */
+}
+
+article table th { /* style for the table header */
+	background-color: #377da8; /* darker color for header row*/
+	color: #bfdffd; /* the text is lighter */
+	padding: 10px; /* vertical spacing inside the header to give more room */
+}
+
+article table td {
+	color: #02265b; /* text color in table rows */
+	border: 1px solid #02265b; /* border inside the table (thinner than outside) */
+	text-align: left; /* text inside the table is aligned left*/
+	padding: 10px 20px; /* padding inside each cell */
+}
+
+/* Footer is basically the same as the header but with smaller font and less padding */
+footer {
+	background-color: #02265b;
+	color: #e6f2ff;
+	text-align: center;
+	border-radius: 10px;
+	padding: 10px;
+	font-size: 18px;
+}
